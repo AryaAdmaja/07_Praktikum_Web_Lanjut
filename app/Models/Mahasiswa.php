@@ -16,9 +16,17 @@ class Mahasiswa extends Model
      * @var array
      */
     protected $fillable = [
-        'Nim',
-        'Nama',
-        'Kelas',
-        'Jurusan',
+        'nim',
+        'nama',
+        'kelas',
+        'jurusan',
+        'email',
+        'alamat',
+        'tanggal_lahir'
     ];
+
+    public static function getByNim($nim)
+    {
+        return self::where('nim', $nim)->firstOrFail();
+    }
 }

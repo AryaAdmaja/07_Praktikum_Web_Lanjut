@@ -11,6 +11,17 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <form class="form-inline" method="POST" action="{{ route('mahasiswa.search') }}">
+                @csrf
+                <input name="search" class="form-control mr-sm-2" type="text" autocomplete="off"
+                    placeholder="cari dengan nama, nim dll">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -23,6 +34,9 @@
             <th>Nama</th>
             <th>Kelas</th>
             <th>Jurusan</th>
+            <th>Email</th>
+            <th>Alamat</th>
+            <th>TTL</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($mahasiswa as $mhs)
@@ -32,6 +46,9 @@
                 <td>{{ $mhs->nama }}</td>
                 <td>{{ $mhs->kelas }}</td>
                 <td>{{ $mhs->jurusan }}</td>
+                <td>{{ $mhs->email }}</td>
+                <td>{{ $mhs->alamat }}</td>
+                <td>{{ $mhs->tanggal_lahir }}</td>
                 <td>
                     <form action="{{ route('mahasiswa.destroy', ['mahasiswa' => $mhs->nim]) }}" method="POST">
 
@@ -45,4 +62,9 @@
             </tr>
         @endforeach
     </table>
+    <div class="row">
+        <div class="d-flex">
+            {{ $mahasiswa->links('pagination::bootstrap-4') }}
+        </div>
+    </div>
 @endsection

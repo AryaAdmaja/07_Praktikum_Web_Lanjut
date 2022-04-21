@@ -23,20 +23,31 @@
                         @csrf
                         <div class="form-group">
                             <label for="Nim">Nim</label>
-                            <input type="text" name="Nim" class="form-control" id="Nim" aria-describedby="Nim">
+                            <input autocomplete="off" type="text" name="nim" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="Nama">Nama</label>
-                            <input type="Nama" name="Nama" class="form-control" id="Nama" ariadescribedby="Nama">
+                            <input autocomplete="off" type="text" name="nama" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="Kelas">Kelas</label>
-                            <input type="Kelas" name="Kelas" class="form-control" id="Kelas" ariadescribedby="password">
+                            <input autocomplete="off" type="text" name="kelas" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="Jurusan">Jurusan</label>
-                            <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan"
-                                ariadescribedby="Jurusan">
+                            <input autocomplete="off" type="text" name="jurusan" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="Jurusan">Email</label>
+                            <input autocomplete="off" type="text" name="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="Jurusan">Alamat</label>
+                            <input autocomplete="off" type="text" name="alamat" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="Jurusan">Tanggal Lahir</label>
+                            <input autocomplete="off" type="date" name="tanggal_lahir" class="form-control">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
